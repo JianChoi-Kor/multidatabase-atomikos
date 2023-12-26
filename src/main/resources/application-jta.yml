@@ -1,0 +1,50 @@
+spring:
+  jpa:
+    hibernate:
+      show-sql: true
+      ddl-auto: validation
+    open-in-view: false
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+      dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  output:
+    ansi:
+      enabled: always
+
+  datasource:
+    first:
+      xa-properties:
+        url: jdbc:mysql://localhost:3306/first_database
+        user: root
+        password:
+      xa-data-source-class-name: com.mysql.cj.jdbc.MysqlXADataSource
+      unique-resource-name: 'first'
+      min-pool-size: 5
+      max-pool-size: 10
+      hibernate:
+        ddl-auto: none
+        dialect: org.hibernate.dialect.MySQLDialect
+        naming:
+          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+          physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+    second:
+      xa-properties:
+        url: jdbc:mysql://localhost:3306/second_database
+        user: root
+        password:
+      xa-data-source-class-name: com.mysql.cj.jdbc.MysqlXADataSource
+      unique-resource-name: 'second'
+      min-pool-size: 5
+      max-pool-size: 10
+      hibernate:
+        ddl-auto: none
+        dialect: org.hibernate.dialect.MySQLDialect
+
+com:
+  atomikos:
+    icatch:
+      file: test.txt

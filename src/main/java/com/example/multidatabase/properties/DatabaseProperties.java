@@ -71,7 +71,8 @@ public class DatabaseProperties {
             }
 
             return properties;
-        }   }
+        }
+    }
 
     @Data
     public static class Naming {

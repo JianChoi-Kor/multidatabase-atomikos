@@ -3,6 +3,7 @@ package com.example.multidatabase.second.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+@Builder
 @ToString
 @Getter
 @AllArgsConstructor

@@ -1,11 +1,9 @@
 package com.example.multidatabase.first.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
+@Builder
 @ToString
 @Getter
 @AllArgsConstructor

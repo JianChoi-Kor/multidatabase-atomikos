@@ -46,4 +46,4 @@ spring:
 com:
   atomikos:
     icatch:
-      file: test.txt
+      file: atomikos.txt

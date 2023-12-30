@@ -42,8 +42,3 @@ spring:
       hibernate:
         ddl-auto: none
         dialect: org.hibernate.dialect.MySQLDialect
-
-com:
-  atomikos:
-    icatch:
-      file: atomikos.txt

@@ -5,8 +5,6 @@ import com.example.multidatabase.properties.DatabaseProperties;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.boot.orm.jpa.EntityManagerFactoryBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -15,7 +13,6 @@ import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 
 import javax.sql.DataSource;
-import java.util.HashMap;
 
 
 @Configuration
@@ -31,18 +28,6 @@ public class FirstDataSourceConfig {
     private static final String DATASOURCE_BEAN_NAME = "firstDataSource";
     private static final String DATASOURCE_PROPERTIES_PREFIX = "spring.datasource.first";
     private static final String HIBERNATE_PROPERTIES = "firstHibernateProperties";
-
-//    @Primary
-//    @Bean(name = ENTITY_MANAGER_BEAN_NAME)
-//    public LocalContainerEntityManagerFactoryBean entityManagerFactory(
-//            EntityManagerFactoryBuilder builder,
-//            @Qualifier(DATASOURCE_BEAN_NAME) DataSource dataSource,
-//            @Qualifier(HIBERNATE_PROPERTIES) DatabaseProperties.Hibernate hibernateProperties
-//    ) {
-//        return builder.dataSource(dataSource).packages("com.example.multidatabase.first.entity")
-//                .persistenceUnit(ENTITY_MANAGER_BEAN_NAME)
-//                .properties(DatabaseProperties.Hibernate.propertiesToMap(hibernateProperties)).build();
-//    }
 
     @Primary
     @Bean(name = ENTITY_MANAGER_BEAN_NAME)

@@ -19,7 +19,7 @@ spring:
       xa-properties:
         url: jdbc:mysql://localhost:3306/first_database
         user: root
-        password:
+        password: 9269
       xa-data-source-class-name: com.mysql.cj.jdbc.MysqlXADataSource
       unique-resource-name: 'first'
       min-pool-size: 5
@@ -34,7 +34,7 @@ spring:
       xa-properties:
         url: jdbc:mysql://localhost:3306/second_database
         user: root
-        password:
+        password: 9269
       xa-data-source-class-name: com.mysql.cj.jdbc.MysqlXADataSource
       unique-resource-name: 'second'
       min-pool-size: 5
@@ -42,8 +42,3 @@ spring:
       hibernate:
         ddl-auto: none
         dialect: org.hibernate.dialect.MySQLDialect
-
-com:
-  atomikos:
-    icatch:
-      file: atomikos.txt
